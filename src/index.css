@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anta&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navbar1 {
+  @apply relative flex flex-wrap items-center justify-between px-2 py-3 mb-3 bg-secondary transition ease-in-out duration-500 z-50;
+}
+.navbar2 {
+  @apply relative flex flex-wrap items-center justify-between md:px-2 md:py-3 md:mb-3 bg-transparent transition ease-in-out duration-500 z-50;
+}
+
+.splide__pagination__page button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  background-color: black;
+  background-image: none;
+}
+.splide__arrow svg {
+  fill: white;
+  height: 1rem;
+  transition: fill 0.2s linear;
+  width: 1rem;
+}
+.splide__arrow {
+  align-items: center;
+  background: black;
+  border: 0;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  height: 1.5rem;
+  justify-content: center;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.5rem;
+  z-index: 1;
+}
+
+.react-tabs__tab-list {
+  border-bottom: none;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.react-tabs__tab--selected {
+  background: #fff;
+  border-color: #aaa;
+  color: black;
+  border-radius: 5px 5px 0 0;
+  border: none;
+  border-bottom: 1px solid black;
+  font-weight : 500;
+  outline-bottom : 1px solid black;
+}
