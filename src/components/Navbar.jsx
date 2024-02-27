@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import logo from '../assets/images/logo.png';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 export default function Navbar() {
     const [navbarOpen, setNavbarOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
@@ -23,15 +22,7 @@ export default function Navbar() {
         <div className='fixed top-0 w-full z-50'>
             <nav className={scrolled ? "navbar1" : "navbar2"}>
                 <div className="w-[96%] md:w-[90%] m-auto md:px-4 flex flex-wrap md:flex-wrap-reverse items-center justify-between">
-                    <motion.div
-                        initial={{ x: -100 }}
-                        animate={{ x: 0 }}
-                        transition={{
-                            ease: "linear",
-                            duration: 2,
-                            x: { duration: 1 },
-                            delay: 0.2
-                        }}
+                    <div
                         className="w-full relative flex justify-between md:w-auto md:static md:block md:justify-start py-4 md:py-0 px-3 md:px-0">
                         <Link className="text-sm font-bold leading-relaxed inline-block md:mr-4 md:py-2 whitespace-nowrap uppercase text-white"
                             to='/'>
@@ -42,7 +33,7 @@ export default function Navbar() {
                             onClick={() => setNavbarOpen(!navbarOpen)}>
                             <i className="fas fa-bars"></i>
                         </button>
-                    </motion.div>
+                    </div>
                     <div className={"md:flex flex-grow md:flex-grow-0 items-center w-full md:w-auto bg-primary md:bg-transparent" + (navbarOpen ? " flex" : " hidden")}>
                         <ul className="flex flex-col md:flex-row list-none md:ml-auto md:space-x-16 w-full md:w-auto">
                             <li className="nav-item mx-4 md:mx-0 border-b-2 border-t-2 border-secondary">
