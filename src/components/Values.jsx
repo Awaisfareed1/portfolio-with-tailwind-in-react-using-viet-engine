@@ -6,14 +6,6 @@ const Values = () => {
             <div className='w-[96%] md:w-[90%] lg:w-[80%]  m-auto md:px-4'>
                 <div className='grid grid-cols-2'>
                     <motion.div 
-                    animate={{rotate : [0,45, 90, 135, 180, 225, 270, 315, 360]}}
-                    transition={{
-                        ease: 'easeOut',
-                        repeat: Infinity,
-                        duration: 10,
-                        delay: 6,
-                        
-                    }}
                     className="col-span-2 md:col-span-1 flex justify-center items-center">
                         <img src={valuegroup} alt="" />
                     </motion.div>
