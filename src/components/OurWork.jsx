@@ -8,20 +8,9 @@ import { useRef } from 'react';
 import { useScroll, motion, useTransform } from 'framer-motion';
 
 const OurWork = () => {
-    const ref = useRef(null);
-
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        offset: ["start end", "end end"]
-    });
     const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
     return (
-        <motion.div ref={ref}
-            style={{
-                scale: scaleProgress,
-                opacity: 1,
-                pathLength: scrollYProgress
-            }}
+        <motion.div 
             className="w-full my-[5%]">
             <div className='w-[96%] md:w-[90%] lg:w-[80%] xl:w-[60%] m-auto md:px-4'>
                 <div className='text-center text-secondary'>
