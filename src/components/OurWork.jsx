@@ -4,11 +4,8 @@ import work2 from '../assets/images/work2.png';
 import work3 from '../assets/images/work3.png';
 import work4 from '../assets/images/work4.png';
 import work5 from '../assets/images/work5.png';
-import { useRef } from 'react';
-import { useScroll, motion, useTransform } from 'framer-motion';
 
 const OurWork = () => {
-    const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
     return (
         <motion.div 
             className="w-full my-[5%]">
